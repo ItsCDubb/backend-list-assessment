@@ -28,7 +28,9 @@ __author__ = "Chris Warren"
 
 
 def remove_adjacent(nums):
+
     a = nums[:1]
+
     for item in nums[1:]:
         if item != a[-1]:
             a.append(item)
@@ -47,7 +49,9 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
+
     a = []
+
     while len(list1) and len(list2):
         if list1[0] < list2[0]:
             a.append(list1.pop(0))
@@ -56,6 +60,7 @@ def linear_merge(list1, list2):
 
     a.extend(list1)
     a.extend(list2)
+    
     return a
 
 

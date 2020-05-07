@@ -5,7 +5,7 @@ Kenzie assignment: List1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Chris Warren"
+__author__ = "Chris Warren with help from Cheria Artis"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -26,11 +26,14 @@ __author__ = "Chris Warren"
 
 
 def match_ends(words):
+
     numbers = []
+
     for x in words:
         if len(x) >= 2 and x[0] == x[-1]:
             numbers.append(x)
             x += x
+
     return len(numbers)
 
 
@@ -47,6 +50,7 @@ def match_ends(words):
 
 def front_x(words):
     words.sort()
+
     isA = []
     isB = []
 
@@ -55,6 +59,7 @@ def front_x(words):
             isA.append(word)
         else:
             isB.append(word)
+
     return isA + isB
 
 
@@ -68,9 +73,10 @@ def front_x(words):
 
 
 def sort_last(tuples):
-        new_tuples = sorted(tuples, key=lambda tup: tup[1])
-        return new_tuples
 
+        def last_sorted(b): return b[-1]
+        
+        return sorted(tuples, key=last_sorted)
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
