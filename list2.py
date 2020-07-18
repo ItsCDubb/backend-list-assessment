@@ -60,7 +60,7 @@ def linear_merge(list1, list2):
 
     a.extend(list1)
     a.extend(list2)
-    
+
     return a
 
 
